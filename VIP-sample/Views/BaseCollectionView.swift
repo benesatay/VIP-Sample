@@ -8,7 +8,7 @@
 import UIKit
 
 protocol CollectionViewDelegate: AnyObject {
-
+    //do something
 }
 
 class BaseCollectionView: UIView {
@@ -74,14 +74,12 @@ class BaseCollectionView: UIView {
 }
 
 extension BaseCollectionView: UICollectionViewDelegate {
-    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-
+        //do something
     }
 }
 
 extension BaseCollectionView: UICollectionViewDataSource {
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return _dataCollection.count
     }
@@ -104,7 +102,6 @@ extension BaseCollectionView: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if _collectionCell == .movieCell {
-//            let cellWidth = (self.frame.width-50)/2
             return CGSize(width: self.frame.width-20, height: 50)
         } else {
             return .zero
